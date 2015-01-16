@@ -78,6 +78,6 @@ detected anomalies, and a plot of the RRI with anomalies removed.
  
  Parameter values can be changed from their default values in the following
  way:
-          [xRRI,fsRRI]=ECG_to_RRI(xECG,fsECG,'timethresh',0.5);
+      [xRRI,fsRRI]=ECG_to_RRI(xECG,fsECG,'timethresh',0.5);
  
  In the above, the user has selected the parameter 'timethresh' as 0.5 s. 
