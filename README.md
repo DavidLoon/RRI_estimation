@@ -10,9 +10,11 @@ consecutive R peaks.
 
  
    Step 1: The ECG is bandpass filtered (suggested range 5 - 20 Hz)
+
    Step 2: The R peaks are estimated. R peaks are expected to be larger
            than parameter 'ampthresh', and it is expected that a minimum 
            time interval exists between successive peaks 'timethresh'.
+
    Step 3: The user is presented with a plot illustrating peaks that have
            been identified (upper subplot) and the time difference between 
            successive peaks (lower subplot). 
