@@ -22,10 +22,10 @@ The RRI is converted via the following steps:
  
            Change parameters (Y/N) ?
 
-           Entering 'Y' allows the user to change the parameters before 
-           proceeding to the next step. If only a small number of peaks 
-           have been misclassified, the user may review these errors in the
-           next step by entering 'N'.
+   Entering 'Y' allows the user to change the parameters before 
+   proceeding to the next step. If only a small number of peaks 
+   have been misclassified, the user may review these errors in the
+   next step by entering 'N'.
  
    Step 4: If anomalies have been detected, the user is then prompted
            with:
