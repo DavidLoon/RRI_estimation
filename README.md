@@ -2,7 +2,7 @@
 MATLAB: Generates R-R interval (RRI) data from raw ECG data
 
 Cardiac output is typically recorded in the form of ECG which contains several
-clearly identifiable peaks, see Fig. 1. In particular, the R peaks are dominant
+clearly identifiable peaks. In particular, the R peaks are dominant
 sharp peaks in the waveform. Most analysis is performed on a time series derived
 from the ECG – the RR interval (RRI) – which is the time difference between
 consecutive R peaks.
