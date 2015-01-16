@@ -1,11 +1,7 @@
 ﻿# RRI_estimation
 MATLAB: Generates R-R interval (RRI) data from raw ECG data
 
-Cardiac output is typically recorded in the form of ECG which contains several
-clearly identifiable peaks. In particular, the R peaks are dominant
-sharp peaks in the waveform. Most analysis is performed on a time series derived
-from the ECG – the RR interval (RRI) – which is the time difference between
-consecutive R peaks.
+Cardiac output is typically recorded in the form of ECG which contains several clearly identifiable peaks. In particular, the R peaks are dominant sharp peaks in the waveform. Most analysis is performed on a time series derived from the ECG – the RR interval (RRI) – which is the time difference between consecutive R peaks.
 
 The RRI is obtained via the following steps:
  
@@ -17,26 +13,17 @@ Step 3: The user is presented with a plot illustrating peaks that have been iden
  
            Change parameters (Y/N) ?
 
-Entering 'Y' allows the user to change the parameters before proceeding to the next step. If only a small number of peaks have been misclassified, the user may review these errors in the next step by entering 'N'.
+Entering 'Y' allows the user to change the parameters before proceeding to the next step. If only a small number of peaks have been misclassified (anomalies), the user may review these errors in the next step by entering 'N'.
  
 Step 4: If anomalies have been detected, the user is then prompted with:
  
            Possible anomaly detected on or after time x, remove (Y/N)? 
  
-For each detected anomaly, the user can then manually review
-the plots to determine whether the anomaly is genuine (a peak
-has not been detected OR a spurious peak has been detected). If
-the anomaly is genuine, the user should enter 'Y' and the
-anomaly will be corrected. Otherwise, the user should enter 'N'
-and no changes will be made concerning the potential anomaly.
-The sensitivity of the anomaly detection algorithm is controlled
-by 'anomalyparam'.
+For each detected anomaly, the user can then manually review the plots to determine whether the anomaly is genuine (a peak has not been detected OR a spurious peak has been detected). If the anomaly is genuine, the user should enter 'Y' and the anomaly will be corrected. Otherwise, the user should enter 'N' and no changes will be made concerning the potential anomaly. The sensitivity of the anomaly detection algorithm is controlled by 'anomalyparam'.
 
-Step 5: The difference between R peaks is sampled at regular intervals
-(controlled by parameter fsRRI) to generate the RRI.
+Step 5: The difference between R peaks is sampled at regular intervals (controlled by parameter fsRRI) to generate the RRI.
 
-Step 6: The user is presented with a plot of the final RRI with
-detected anomalies, and a plot of the RRI with anomalies removed. 
+Step 6: The user is presented with a plot of the final RRI with detected anomalies, and a plot of the RRI with anomalies removed. 
 
  -------------------------------------------------------------------------
  Required inputs:
