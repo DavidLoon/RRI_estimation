@@ -7,7 +7,7 @@ sharp peaks in the waveform. Most analysis is performed on a time series derived
 from the ECG – the RR interval (RRI) – which is the time difference between
 consecutive R peaks.
 
-The RRI is converted via the following steps:
+The RRI is obtained via the following steps:
  
 Step 1: The ECG is bandpass filtered (suggested range 5 - 20 Hz)
 
