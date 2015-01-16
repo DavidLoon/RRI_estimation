@@ -27,24 +27,25 @@ The RRI is converted via the following steps:
    have been misclassified, the user may review these errors in the
    next step by entering 'N'.
  
-   Step 4: If anomalies have been detected, the user is then prompted
-           with:
+Step 4: If anomalies have been detected, the user is then prompted with:
  
            Possible anomaly detected on or after time x, remove (Y/N)? 
  
-           For each detected anomaly, the user can then manually review
-           the plots to determine whether the anomaly is genuine (a peak
-           has not been detected OR a spurious peak has been detected). If
-           the anomaly is genuine, the user should enter 'Y' and the
-           anomaly will be corrected. Otherwise, the user should enter 'N'
-           and no changes will be made concerning the potential anomaly.
-           The sensitivity of the anomaly detection algorithm is controlled
-           by 'anomalyparam'.
-   Step 5: The difference between R peaks is sampled at regular intervals
-           (controlled by parameter fsRRI) to generate the RRI.
-   Step 6: The user is presented with a plot of the final RRI with
-           detected anomalies, and a plot of the RRI with anomalies removed. 
-           
+For each detected anomaly, the user can then manually review
+the plots to determine whether the anomaly is genuine (a peak
+has not been detected OR a spurious peak has been detected). If
+the anomaly is genuine, the user should enter 'Y' and the
+anomaly will be corrected. Otherwise, the user should enter 'N'
+and no changes will be made concerning the potential anomaly.
+The sensitivity of the anomaly detection algorithm is controlled
+by 'anomalyparam'.
+
+Step 5: The difference between R peaks is sampled at regular intervals
+(controlled by parameter fsRRI) to generate the RRI.
+
+Step 6: The user is presented with a plot of the final RRI with
+detected anomalies, and a plot of the RRI with anomalies removed. 
+
  -------------------------------------------------------------------------
  Required inputs:
  
