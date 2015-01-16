@@ -1,4 +1,4 @@
-# RRI_estimation
+﻿# RRI_estimation
 MATLAB: Generates R-R interval (RRI) data from raw ECG data
 
 Cardiac output is typically recorded in the form of ECG which contains several
@@ -9,23 +9,15 @@ consecutive R peaks.
 
 The RRI is converted via the following steps:
  
-   Step 1: The ECG is bandpass filtered (suggested range 5 - 20 Hz)
+Step 1: The ECG is bandpass filtered (suggested range 5 - 20 Hz)
 
-   Step 2: The R peaks are estimated. R peaks are expected to be larger
-           than parameter 'ampthresh', and it is expected that a minimum 
-           time interval exists between successive peaks 'timethresh'.
+Step 2: The R peaks are estimated. R peaks are expected to be larger than parameter 'ampthresh', and it is expected that a minimum time interval exists between successive peaks 'timethresh'.
 
-   Step 3: The user is presented with a plot illustrating peaks that have
-           been identified (upper subplot) and the time difference between 
-           successive peaks (lower subplot). 
-           The user is then prompted with: 
+Step 3: The user is presented with a plot illustrating peaks that have been identified (upper subplot) and the time difference between  successive peaks (lower subplot). The user is then prompted with: 
  
            Change parameters (Y/N) ?
 
-   Entering 'Y' allows the user to change the parameters before 
-   proceeding to the next step. If only a small number of peaks 
-   have been misclassified, the user may review these errors in the
-   next step by entering 'N'.
+Entering 'Y' allows the user to change the parameters before proceeding to the next step. If only a small number of peaks have been misclassified, the user may review these errors in the next step by entering 'N'.
  
 Step 4: If anomalies have been detected, the user is then prompted with:
  
@@ -76,8 +68,8 @@ detected anomalies, and a plot of the RRI with anomalies removed.
                            sensitive the algorithm.
            
  
- Parameter values can be changed from their default values in the following
- way:
- 							[xRRI,fsRRI]=ECG_to_RRI(xECG,fsECG,'timethresh',0.5);
+Parameter values can be changed from their default values in the following way:
+
+	[xRRI,fsRRI]=ECG_to_RRI(xECG,fsECG,'timethresh',0.5);
  
- In the above, the user has selected the parameter 'timethresh' as 0.5 s. 
+In the above, the user has selected the parameter 'timethresh' as 0.5 s. 
