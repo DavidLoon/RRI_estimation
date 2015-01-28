@@ -213,8 +213,8 @@ for n=2:1:length(RR_unfiltered)
     end
 end
 
-RR = interp1(T_peak_filtered,RR_filtered,TQ,'cubic');
-RR_unfiltered_ts=interp1(T_peak(1:end-1),RR_unfiltered,TQ,'cubic');
+RR = interp1(T_peak_filtered,RR_filtered,TQ,'PCHIP');
+RR_unfiltered_ts=interp1(T_peak(1:end-1),RR_unfiltered,TQ,'PCHIP');
 
 if ANOMALIES_DETECTED==1
     figure
