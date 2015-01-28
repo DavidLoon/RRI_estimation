@@ -266,7 +266,7 @@ subplot(2,1,1)
 plot(T_ECG,x_ECG,'k')
 ylabel('ECG')
 hold on;
-plot(T_peak,x_ECG(ceil(T_peak*fs)),'markersize',16,'color','r','LineStyle','.')
+plot(T_peak,x_ECG(ceil(T_peak*fs)),'markersize',16,'color','r','Marker','.','linestyle','n')
 plot(T_ECG,ones(size(x_ECG))*MINPEAKHEIGHT,'b--','linewidth',2)
 legend('Filtered ECG','Estimated R peaks','ampthresh')
 h1=gca();
