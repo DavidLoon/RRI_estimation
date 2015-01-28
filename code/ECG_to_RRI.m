@@ -94,8 +94,12 @@ function [xRRI,fsRRI]=ECG_to_RRI(varargin)
 inversion_test(xECG,fsECG);
 
 % generate filter coefficients
-[b,a]=butter(4,[hpECG,lpECG]/(fsECG/2),'bandpass');
-
+try
+    [b,a]=butter(4,[hpECG,lpECG]/(fsECG/2),'bandpass');
+catch
+    % For more recent releases of MATLAB
+    [b,a]=butter(4,[hpECG,lpECG]/(fsECG/2),'pass');
+end
 % filter ECG
 yECG=filtfilt(b,a,xECG);
 
@@ -137,7 +141,7 @@ while ~SATISFIED_WITH_PARAMETERS
     % find peaks in ECG data
     [~,T_peak]=ECG_peak_detection_v2(ECG,T,ECG_fs,ampthresh,timethresh);
     ip_str = input(['Change parameters (Y/N) ? '],'s');
-    
+    ip_str=upper(ip_str);
     if strcmp(ip_str,'Y')
         param_str = input(['Which parameter (ampthresh,timethresh,sign) ? '],'s');
         
@@ -184,7 +188,7 @@ for n=2:1:length(RR_unfiltered)
         ANOMALIES_DETECTED=1;
         while ~USER_SATISFACTION
             user_str = input(['Possible anomaly detected on or after time ',num2str(T_peak(n)),' , remove (Y/N)? '],'s');
-            
+            user_str=upper(user_str);
             if strcmp(user_str,'Y')
                 disp('Anomaly corrected.')
                 USER_SATISFACTION=1;
