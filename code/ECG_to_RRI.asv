@@ -77,8 +77,7 @@ function [xRRI,fsRRI]=ECG_to_RRI(varargin)
 %       anomalyparam   ~    Controls the sensitivity of the anomaly detection
 %                           algorithm. The larger the value, the less
 %                           sensitive the algorithm.
-%       AAR            ~    Automatic anomaly removal, 'N' (default) or
-%       'Y'.
+%       AAR            ~    Automatic anomaly removal, 'N' (default) or 'Y'
 %                           When set to 'Y', all deteted anomalies are removed.           
 % 
 % Parameter values can be changed from their default values in the following
