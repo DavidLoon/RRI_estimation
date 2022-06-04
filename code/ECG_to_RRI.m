@@ -2,9 +2,6 @@
 function [xRRI,fsRRI]=ECG_to_RRI(varargin)
 % -------------------------------------------------------------------------
 % ECG_to_RRI.m
-% Author: David Looney
-% Email: daveloon@gmail.com
-% Date: Jan 2015
 % 
 % -------------------------------------------------------------------------
 % Syntax: 
